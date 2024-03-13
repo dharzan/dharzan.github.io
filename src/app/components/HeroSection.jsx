@@ -28,7 +28,7 @@ const HeroSection = () => {
                 "Mobile Developer",
                 1000,
                 "Software Developer",
-                1000,
+                1500,
                 "Embedded Systems Software Developer"
               ]}
               wrapper="span"
@@ -37,8 +37,7 @@ const HeroSection = () => {
             />
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-            voluptuous.
+            Gamer By Night
           </p>
           <div>
             <Link
