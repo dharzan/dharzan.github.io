@@ -17,7 +17,7 @@ const projectsData = [
   {
     id: 2,
     title: "React Three Fiber Three.js Portfolio Website",
-    description: "Bioengineering Space themed with 3D Organs to demonstrate the use ThreeJS WebGL ",
+    description: "3D organs floating in space to demonstrate the use ThreeJS WebGL ",
     image: "/images/Threejs.png",
     tag: ["All", "Web"],
     gitUrl: "/",
