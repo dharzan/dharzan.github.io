@@ -7,12 +7,12 @@ export const metadata = {
   title: "Dharsan Guruparan",
   description: "Project Portfolio",
   icons: {
-    icon: './images/dharzan2.png',
-    shortcut: './images/dharzan2.png',
-    apple: './images/dharzan2.png',
+    icon: './images/dharzan.png',
+    shortcut: './images/dharzan.png',
+    apple: './images/dharzan.png',
     other: {
-      rel: './images/dharzan2.png',
-      url: './images/dharzan2.png',
+      rel: './images/dharzan.png',
+      url: './images/dharzan.png',
     },
   }
 };
