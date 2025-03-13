@@ -26,7 +26,7 @@ const HeroSection = () => {
                 1000,
                 "Mobile Developer",
                 1000,
-                "Software Developer",
+                "Intergration Testing Engineer",
                 1500,
                 "Embedded Systems Software Developer"
               ]}
@@ -45,14 +45,14 @@ const HeroSection = () => {
             >
               Linkedin
             </Link>
-            <Link
+            {/* <Link
               href="https://dharzan.github.io/"
               className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-800 text-white mt-3"
             >
               <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
                Timeline
               </span>
-            </Link>
+            </Link> */}
           </div>
         </motion.div>
         <motion.div

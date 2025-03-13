@@ -17,11 +17,11 @@ const projectsData = [
   {
     id: 2,
     title: "React Three Fiber Three.js Portfolio Website",
-    description: "Bioengineering Space themed with 3D Organs to demonstrate the use ThreeJS WebGL ",
+    description: "Bioengineering Space theme with 3D Organs to demonstrate the use ThreeJS WebGL ",
     image: "/images/Threejs.png",
     tag: ["All", "Web"],
     gitUrl: "/",
-    previewUrl: "https://diyadhyani.com",
+        previewUrl: "https://diyadhyani.com",
   },
   // {
   //   id: 3,
