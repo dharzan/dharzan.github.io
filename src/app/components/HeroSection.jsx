@@ -28,27 +28,27 @@ const HeroSection = () => {
           transition={{ duration: 0.5 }}
           className="col-span-8 place-self-center text-center sm:text-left justify-self-start"
         >
-          <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-8xl lg:leading-normal font-extrabold">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600">
-            </span>
-            <br></br>
+          <h1 className="text-white mb-2 text-3xl sm:text-4xl lg:text-6xl lg:leading-tight font-extrabold">
+            Dharsan Guruparan
+          </h1>
+          <div className="relative h-12 sm:h-14 lg:h-16 mb-4 overflow-hidden text-2xl lg:text-4xl font-semibold text-primary-400">
             <TypeAnimation
               sequence={[
-                "Dharsan Guruparan",
-                1000,
                 "Software Engineer",
-                1000,
+                1200,
                 "Mobile Developer",
-                1000,
+                1200,
                 "SDET Engineer",
                 1500,
-                "Embedded Systems Software Developer"
+                "Embedded Systems Software Developer",
+                1800,
               ]}
               wrapper="span"
-              speed={50}
+              speed={45}
               repeat={Infinity}
+              className="absolute inset-0 flex items-center"
             />
-          </h1>
+          </div>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
             Gamer By Night
           </p>

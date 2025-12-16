@@ -28,7 +28,7 @@ const projectsData = [
     title: "Trip Streamer",
     description: "Itinerary builder that mixes curated travel plans with live streaming-inspired storytelling.",
     image: "/images/trip.png",
-    tag: ["All", "Web", "3D"],
+    tag: ["All", "Web"],
     gitUrl: "https://github.com/dharzan/trip-streamer",
     previewUrl: "https://github.com/dharzan/trip-streamer",
     sceneKey: "trip",
@@ -38,7 +38,7 @@ const projectsData = [
     title: "VaultDrop",
     description: "Secure file locker focused on seamless sharing flows and encryption-first storage utilizing go.",
     image: "/images/vault.png",
-    tag: ["All", "Web", "3D"],
+    tag: ["All", "Web"],
     gitUrl: "https://github.com/dharzan/VaultDrop",
     previewUrl: "https://github.com/dharzan/VaultDrop",
     sceneKey: "vault",
@@ -119,11 +119,6 @@ const ProjectsSection = () => {
           onClick={handleTagChange}
           name="Mobile"
           isSelected={tag === "Mobile"}
-        />
-        <ProjectTag
-          onClick={handleTagChange}
-          name="3D"
-          isSelected={tag === "3D"}
         />
       </div>
       <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
