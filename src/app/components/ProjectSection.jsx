@@ -28,18 +28,20 @@ const projectsData = [
     title: "Trip Streamer",
     description: "Itinerary builder that mixes curated travel plans with live streaming-inspired storytelling.",
     image: "/images/trip.png",
-    tag: ["All", "Web"],
+    tag: ["All", "Web", "3D"],
     gitUrl: "https://github.com/dharzan/trip-streamer",
     previewUrl: "https://github.com/dharzan/trip-streamer",
+    sceneKey: "trip",
   },
   {
     id: 4,
     title: "VaultDrop",
     description: "Secure file locker focused on seamless sharing flows and encryption-first storage utilizing go.",
     image: "/images/vault.png",
-    tag: ["All", "Web"],
+    tag: ["All", "Web", "3D"],
     gitUrl: "https://github.com/dharzan/VaultDrop",
     previewUrl: "https://github.com/dharzan/VaultDrop",
+    sceneKey: "vault",
   },
   // {
   //   id: 3,
@@ -118,6 +120,11 @@ const ProjectsSection = () => {
           name="Mobile"
           isSelected={tag === "Mobile"}
         />
+        <ProjectTag
+          onClick={handleTagChange}
+          name="3D"
+          isSelected={tag === "3D"}
+        />
       </div>
       <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
         {filteredProjects.map((project, index) => (
@@ -135,6 +142,7 @@ const ProjectsSection = () => {
               imgUrl={project.image}
               gitUrl={project.gitUrl}
               previewUrl={project.previewUrl}
+              sceneKey={project.sceneKey}
             />
           </motion.li>
         ))}
