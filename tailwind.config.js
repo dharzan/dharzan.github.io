@@ -7,10 +7,18 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      colors: {
+        phosphor: {
+          950: "#020802",
+          DEFAULT: "#00c44a",
+          bright: "#00ff5e",
+          dim: "#005a20",
+          border: "#0a2e0a",
+          panel: "#0a1a0a",
+        },
+      },
+      fontFamily: {
+        mono: ["var(--font-mono)", "JetBrains Mono", "Fira Code", "Courier New", "monospace"],
       },
     },
   },
