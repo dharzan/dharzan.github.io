@@ -1,36 +1,89 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Dharsan Guruparan Portfolio
 
-## Getting Started
+CI control-room portfolio for backend, full-stack, SDET / quality engineering, distributed systems testing, cloud, CI/CD, and AI-assisted engineering workflows.
 
-First, run the development server:
+## Stack
+
+- Next.js App Router
+- React
+- TypeScript
+- Tailwind CSS
+- Static TypeScript data files
+- Vercel static deployment
+- Playwright smoke tests
+- GSAP section choreography with reduced-motion bypass
+
+## Local Development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Build
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```bash
+npm run lint
+npm run build
+```
 
-## Learn More
+## Tests
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run test:e2e
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Install Playwright browsers first if needed:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```bash
+npx playwright install
+```
 
-## Deploy on Vercel
+## Project Structure
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```txt
+src/app                 App Router pages and metadata
+src/components/home     Homepage sections
+src/components/layout   Navbar, footer, section wrapper
+src/components/projects Project cards and detail rendering
+src/components/ui       Small reusable UI primitives
+src/data                Projects, skills, experience, and links
+src/lib                 Shared constants and SEO helpers
+docs                    Architecture and ADR docs
+tests/e2e               Playwright smoke tests
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Adding a Project
+
+Edit `src/data/projects.ts` and add a `Project` object with:
+
+- `slug`
+- `title`
+- `subtitle`
+- `problem`
+- `solution`
+- `architecture`
+- `testingStrategy`
+- `cicd`
+- `learned`
+- `future`
+- `impact`
+- `stack`
+- `category`
+- `featured`
+- `githubUrl`
+- `liveUrl` when available
+
+The homepage and `/projects/[slug]` detail page update from the same data.
+
+## Deployment
+
+Production target is the Vercel project `dharzan-github-io`.
+
+Expected production branch: `new_new_bitmoji`.
+
+## Constraints
+
+No backend, database, CMS, auth, contact form, fake skill percentages, runtime CI status fetching, particles, cursor effects, full-page scroll locks, or active 3D showcase components in V1.

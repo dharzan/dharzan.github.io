@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import gsap from "gsap";
 
 type BootLine = {
   text: string;
@@ -31,6 +30,7 @@ type BootScreenProps = {
 
 export default function BootScreen({ onComplete }: BootScreenProps) {
   const [visibleCount, setVisibleCount] = useState(0);
+  const [dismissed, setDismissed] = useState(false);
   const overlayRef = useRef<HTMLDivElement>(null);
   const doneRef = useRef(false);
 
@@ -43,17 +43,26 @@ export default function BootScreen({ onComplete }: BootScreenProps) {
     ).matches;
 
     if (prefersReducedMotion || !overlayRef.current) {
+      setDismissed(true);
       onComplete();
       return;
     }
 
-    gsap.to(overlayRef.current, {
-      opacity: 0,
-      scale: 0.98,
-      duration: 0.4,
-      ease: "power2.in",
-      onComplete,
-    });
+    const el = overlayRef.current;
+    // opacity fades over 0.4s; visibility becomes hidden at exactly 0.4s so
+    // both Playwright and screen readers treat it as gone after the animation
+    el.style.transition =
+      "opacity 0.4s ease-in, transform 0.4s ease-in, visibility 0s linear 0.4s";
+    el.style.opacity = "0";
+    el.style.transform = "scale(0.98)";
+    el.style.visibility = "hidden";
+    el.style.pointerEvents = "none";
+
+    // Remove from DOM after CSS transition completes
+    setTimeout(() => {
+      setDismissed(true);
+      onComplete();
+    }, 420);
   }
 
   useEffect(() => {
@@ -87,11 +96,13 @@ export default function BootScreen({ onComplete }: BootScreenProps) {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  if (dismissed) return null;
+
   return (
     <div
       ref={overlayRef}
       data-testid="boot-overlay"
-      className="fixed inset-0 z-50 flex cursor-pointer flex-col bg-phosphor-950 p-8 sm:p-16"
+      className="motion-reduce:hidden fixed inset-0 z-[100] flex cursor-pointer flex-col bg-phosphor-950 p-8 sm:p-16"
       onClick={dismiss}
       role="dialog"
       aria-label="Boot sequence — click or press any key to skip"

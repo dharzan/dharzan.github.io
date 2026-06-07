@@ -35,7 +35,7 @@ export default function Contact() {
         </div>
         <div data-terminal-line className="flex flex-wrap gap-3 pt-2">
           {replies.map((reply) => (
-            <Button key={reply.href} href={reply.href} variant="secondary">
+            <Button key={reply.host} href={reply.href} variant="secondary">
               {reply.label}
             </Button>
           ))}

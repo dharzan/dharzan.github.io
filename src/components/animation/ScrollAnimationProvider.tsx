@@ -40,20 +40,20 @@ export default function ScrollAnimationProvider({
           scrollTrigger: {
             trigger: section,
             start: "top 78%",
-            toggleActions: "play none none reverse",
+            toggleActions: "play none none none",
           },
         });
 
         if (cmdHeaders.length > 0) {
-          gsap.set(cmdHeaders, { autoAlpha: 0, y: 12 });
-          timeline.to(cmdHeaders, { autoAlpha: 1, y: 0, duration: 0.5 });
+          gsap.set(cmdHeaders, { y: 12 });
+          timeline.to(cmdHeaders, { y: 0, duration: 0.5 });
         }
 
         if (lines.length > 0) {
-          gsap.set(lines, { autoAlpha: 0, y: 8 });
+          gsap.set(lines, { y: 8 });
           timeline.to(
             lines,
-            { autoAlpha: 1, y: 0, duration: 0.4, stagger: 0.06 },
+            { y: 0, duration: 0.4, stagger: 0.06 },
             cmdHeaders.length > 0 ? "-=0.2" : 0
           );
         }
