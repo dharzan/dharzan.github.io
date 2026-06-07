@@ -1,0 +1,30 @@
+<h2>After the boot — how does navigation work?</h2>
+<p class="subtitle">This is the core UX decision. Choose the model that feels most natural for you.</p>
+
+<div class="options">
+
+  <div class="option" data-choice="scroll-sections" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>Scroll-through sections</h3>
+      <p>After boot, the terminal "outputs" each section as you scroll. Like a very long terminal session — About, Skills, Projects, Experience each appear as if the terminal is printing them live. The scroll drives the "output." Familiar UX, terminal skin on top.</p>
+    </div>
+  </div>
+
+  <div class="option" data-choice="command-nav" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>Persistent command prompt</h3>
+      <p>A real <code>$</code> prompt stays at the top or bottom. You type (or click) commands: <code>ls projects</code>, <code>cat about.md</code>, <code>open tripstream</code>. Each command renders a section. Back button = terminal history. This is the deepest commitment to the metaphor.</p>
+    </div>
+  </div>
+
+  <div class="option" data-choice="hybrid-nav" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="content">
+      <h3>Command nav + scroll within sections</h3>
+      <p>A minimal nav bar shows commands: <code>[about]</code> <code>[projects]</code> <code>[experience]</code>. Clicking one "runs" it and jumps you to that section. Within sections, you just scroll. The command metaphor is visual/decorative but navigation is click-based and accessible.</p>
+    </div>
+  </div>
+
+</div>

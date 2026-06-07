@@ -1,0 +1,10 @@
+{"type":"server-started","port":63842,"host":"127.0.0.1","url_host":"localhost","url":"http://localhost:63842","screen_dir":"/Users/dharsanguruparan/Projects/dharzan.github.io/.superpowers/brainstorm/31381-1780271748/content","state_dir":"/Users/dharsanguruparan/Projects/dharzan.github.io/.superpowers/brainstorm/31381-1780271748/state"}
+{"type":"screen-added","file":"/Users/dharsanguruparan/Projects/dharzan.github.io/.superpowers/brainstorm/31381-1780271748/content/personality.html"}
+{"type":"screen-added","file":"/Users/dharsanguruparan/Projects/dharzan.github.io/.superpowers/brainstorm/31381-1780271748/content/waiting-1.html"}
+{"type":"screen-added","file":"/Users/dharsanguruparan/Projects/dharzan.github.io/.superpowers/brainstorm/31381-1780271748/content/palette.html"}
+{"source":"user-event","type":"click","text":"dharsan@portfolio:~$ boot\n      Initializing...\n      [OK] Backend systems[OK] SDET coverage[OK] CI/CD gates\n      ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░ 80%\n      \n    \n    \n      A — Phosphor Green\n      Classic hacker terminal. That iconic green glow on black. Instantly recognizable as \"I speak machine.\" Timeless in the nerd canon.","choice":"phosphor-green","id":null,"timestamp":1780272083642}
+{"type":"screen-added","file":"/Users/dharsanguruparan/Projects/dharzan.github.io/.superpowers/brainstorm/31381-1780271748/content/navigation.html"}
+{"source":"user-event","type":"click","text":"A\n    \n      Scroll-through sections\n      After boot, the terminal \"outputs\" each section as you scroll. Like a very long terminal session — About, Skills, Projects, Experience each appear as if the terminal is printing them live. The scroll drives the \"output.\" Familiar UX, terminal skin on top.","choice":"scroll-sections","id":null,"timestamp":1780272241256}
+{"type":"screen-added","file":"/Users/dharsanguruparan/Projects/dharzan.github.io/.superpowers/brainstorm/31381-1780271748/content/waiting-2.html"}
+{"type":"screen-added","file":"/Users/dharsanguruparan/Projects/dharzan.github.io/.superpowers/brainstorm/31381-1780271748/content/design-proposal.html"}
+{"type":"server-stopped","reason":"idle timeout"}

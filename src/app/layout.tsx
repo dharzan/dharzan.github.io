@@ -31,7 +31,11 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={jetbrainsMono.variable}>
+    <html
+      lang="en"
+      className={jetbrainsMono.variable}
+      data-scroll-behavior="smooth"
+    >
       <body className="min-h-screen bg-phosphor-950 font-mono text-phosphor antialiased">
         {children}
       </body>

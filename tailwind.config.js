@@ -10,11 +10,11 @@ module.exports = {
       colors: {
         phosphor: {
           950: "#020802",
-          DEFAULT: "#00c44a",
+          DEFAULT: "#00ff5e",
           bright: "#00ff5e",
-          dim: "#005a20",
-          border: "#0a2e0a",
-          panel: "#0a1a0a",
+          dim: "#00ff5e",
+          border: "#00ff5e",
+          panel: "#061206",
         },
       },
       fontFamily: {
