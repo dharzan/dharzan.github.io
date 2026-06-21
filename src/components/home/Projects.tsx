@@ -8,7 +8,7 @@ export default function Projects() {
   return (
     <TerminalSection id="projects" command="ls -la projects/">
       <div className="overflow-hidden rounded border border-phosphor-border">
-        <div className="border-b border-phosphor-border px-5 py-3 font-mono text-xs text-phosphor-dim">
+        <div className="border-b border-phosphor-border px-4 py-3 font-mono text-[11px] leading-5 text-phosphor-dim sm:px-5 sm:text-xs">
           total {projects.length} &nbsp;·&nbsp; click any project to open
         </div>
         {projects.map((project) => (
@@ -18,17 +18,17 @@ export default function Projects() {
             data-terminal-line
             data-testid="project-row"
             aria-label={`Open ${project.title}`}
-            className="flex items-center gap-4 border-b border-phosphor-border px-5 py-3.5 font-mono transition last:border-0 hover:bg-phosphor-panel"
+            className="grid grid-cols-[auto_minmax(0,1fr)] gap-x-3 gap-y-2 border-b border-phosphor-border px-4 py-4 font-mono transition last:border-0 hover:bg-phosphor-panel sm:grid-cols-[auto_13rem_minmax(0,1fr)_auto] sm:items-center sm:gap-4 sm:px-5 sm:py-3.5"
           >
-            <span className="shrink-0 text-xs text-phosphor-dim">▶</span>
-            <span className="w-52 shrink-0 truncate text-sm text-phosphor-bright">
+            <span className="pt-0.5 text-xs text-phosphor-dim sm:pt-0">▶</span>
+            <span className="min-w-0 break-all text-sm leading-6 text-phosphor-bright sm:truncate sm:leading-normal">
               {project.slug}/
             </span>
-            <span className="min-w-0 flex-1 truncate text-xs text-phosphor-dim">
+            <span className="col-start-2 min-w-0 text-xs leading-5 text-phosphor-dim sm:col-auto sm:truncate sm:leading-normal">
               {project.subtitle}
             </span>
             {project.featured ? (
-              <span className="shrink-0 rounded border border-phosphor-dim px-2 py-0.5 text-xs text-phosphor">
+              <span className="col-start-2 w-fit rounded border border-phosphor-dim px-2 py-0.5 text-xs text-phosphor sm:col-auto">
                 ★ featured
               </span>
             ) : null}

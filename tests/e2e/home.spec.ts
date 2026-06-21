@@ -111,6 +111,24 @@ test("project rows exist, show 6 featured projects, and navigate to detail", asy
   await expect(page.getByText("← cd ..")).toBeVisible();
 });
 
+test("project list fits mobile viewport without horizontal overflow", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto("/");
+  await dismissBoot(page);
+  await scrollSection(page, "#projects");
+
+  const projects = page.locator("#projects");
+  await expect(projects.getByText("portfolio-rebuild-ai-workflow/")).toBeVisible();
+  await expect(projects.getByText("Agent-friendly portfolio architecture")).toBeVisible();
+
+  const hasHorizontalOverflow = await page.evaluate(() => {
+    return document.documentElement.scrollWidth > window.innerWidth;
+  });
+  expect(hasHorizontalOverflow).toBe(false);
+});
+
 test("skills section shows all skill groups including Quality Gate Engineering", async ({
   page,
 }) => {
